@@ -83,6 +83,20 @@
       "email": "anis@a",
       "password": "A123456789",
       "isAdmin": false
+    },
+    {
+      "id": "f17c",
+      "name": "ahmad",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": true
+    },
+    {
+      "id": "97a6",
+      "name": "aaa",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
     }
   ]
 }

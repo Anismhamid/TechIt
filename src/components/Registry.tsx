@@ -6,6 +6,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {postUser} from "../services/UserServices";
 import {Dispatch} from "@reduxjs/toolkit";
+import {successMsg} from "../services/Toastify";
 
 interface RegistryProps {}
 
@@ -32,6 +33,9 @@ const Registry: FunctionComponent<RegistryProps> = () => {
 		}),
 		onSubmit: (values) => {
 			postUser(values);
+			successMsg(
+				`Great ${values.name} you are successfuly registered, Now you can Login`,
+			);
 			navigate("/");
 			dipatch(registryAction(values) as any);
 		},
@@ -98,10 +102,7 @@ const Registry: FunctionComponent<RegistryProps> = () => {
 						Registery
 					</button>
 				</form>
-				<Link
-					to='/'
-					className='btn w-100 btn-primary mt-3'
-				>
+				<Link to='/' className='btn w-100 btn-primary mt-3'>
 					Login
 				</Link>
 			</div>
