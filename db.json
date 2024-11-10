@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "name": "anes",
+      "email": "anes@h",
+      "password": "123456789",
+      "isAdmin": false,
+      "id": "9e4a"
+    },
+    {
+      "id": "41a7",
+      "name": "asdasd",
+      "email": "asdas@sdasd",
+      "password": "Aasdasdasdasdasd",
+      "isAdmin": false
+    },
+    {
+      "id": "8d2a",
+      "name": "anes@gmail.com",
+      "email": "aa@aa",
+      "password": "Aaaaaaaaaaaaaaaa",
+      "isAdmin": false
+    },
+    {
+      "id": "9bef",
+      "name": "aaaaa",
+      "email": "anes2@gmail.com",
+      "password": "Aaaaaaaaaaaaaaaaaaa",
+      "isAdmin": false
+    },
+    {
+      "id": "161c",
+      "name": "ssghfh",
+      "email": "anes4@gmail.com",
+      "password": "A12345678",
+      "isAdmin": true
+    },
+    {
+      "id": "0128",
+      "name": "anes",
+      "email": "anis@gmail.com",
+      "password": "A123456789",
+      "isAdmin": true
+    },
+    {
+      "id": "77fd",
+      "name": "aaaaaa",
+      "email": "ans@gmail.com",
+      "password": "A123456789",
+      "isAdmin": true
+    },
+    {
+      "id": "6c3f",
+      "name": "aaaaa",
+      "email": "anisss@gmail.com",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "e86e",
+      "name": "ssss",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
+    }
+  ]
+}
