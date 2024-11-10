@@ -4,14 +4,14 @@ import * as yup from "yup";
 import {User} from "../interfaces/User";
 import {Link, useNavigate} from "react-router-dom";
 import {getAllUsers} from "../services/UserServices";
-import {useDispatch, useSelector} from "react-redux";
-import { login, setAllUsersAction } from "../redux/LoginState";
+import {useDispatch} from "react-redux";
+import {login, setAllUsersAction} from "../redux/LoginState";
+import {errorMsg, successMsg} from "../services/Toastify";
 
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
 	const navigate = useNavigate();
-	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 	const [users, setUsers] = useState<User[]>([]); // Local state to store users
 	const dispatch = useDispatch();
 
@@ -20,11 +20,10 @@ const Login: FunctionComponent<LoginProps> = () => {
 		getAllUsers()
 			.then((res) => {
 				setUsers(res.data); // Store the fetched users in local state
-				setAllUsersAction(res.data)
+				setAllUsersAction(res.data);
 			})
 			.catch((err) => {
-				console.error("Error fetching users:", err);
-				setErrorMessage("Failed to load users. Please try again later.");
+				errorMsg(err);
 			});
 	}, []);
 
@@ -53,11 +52,11 @@ const Login: FunctionComponent<LoginProps> = () => {
 
 			if (foundUser) {
 				// Dispatch login action if user is found
-				dispatch(login(foundUser)as any);
-				navigate("/home"); // Redirect after login (adjust route as needed)
+				dispatch(login(foundUser) as any);
+				navigate("/home");
+				successMsg("Successfully Loged In");
 			} else {
-				// Set error message if credentials are incorrect
-				setErrorMessage("Invalid email or password");
+				errorMsg("Invalid email or password");
 			}
 		},
 	});
@@ -66,8 +65,6 @@ const Login: FunctionComponent<LoginProps> = () => {
 		<div className='login-container'>
 			<div className='login m-auto'>
 				<h3>Login</h3>
-				{errorMessage && <p className='text-danger'>{errorMessage}</p>}{" "}
-				{/* Error Message */}
 				<form onSubmit={formik.handleSubmit}>
 					<div className='form-group'>
 						<input

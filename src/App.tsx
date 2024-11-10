@@ -6,10 +6,13 @@ import Navbar from "./components/Navbar";
 import {Provider} from "react-redux";
 import store from "./redux/Store";
 import Home from "./components/Home";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
 	return (
 		<div className='App w-100'>
+			<ToastContainer/>
 			<Provider store={store}>
 				<Router
 					future={{

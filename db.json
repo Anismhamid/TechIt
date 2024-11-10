@@ -62,6 +62,27 @@
       "email": "anis@a",
       "password": "A123456789",
       "isAdmin": false
+    },
+    {
+      "id": "64cc",
+      "name": "ghghjgf",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": true
+    },
+    {
+      "id": "eae7",
+      "name": "ghghjgf",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": true
+    },
+    {
+      "id": "5674",
+      "name": "fddf",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
     }
   ]
 }

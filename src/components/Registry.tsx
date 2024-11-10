@@ -32,8 +32,8 @@ const Registry: FunctionComponent<RegistryProps> = () => {
 		}),
 		onSubmit: (values) => {
 			postUser(values);
-			dipatch(registryAction(values) as any);
 			navigate("/");
+			dipatch(registryAction(values) as any);
 		},
 	});
 	return (
@@ -101,7 +101,6 @@ const Registry: FunctionComponent<RegistryProps> = () => {
 				<Link
 					to='/'
 					className='btn w-100 btn-primary mt-3'
-					type='submit'
 				>
 					Login
 				</Link>
