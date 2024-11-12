@@ -4,27 +4,19 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
-.App {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 100vh;
+body {
+	background: #fdfcf2;
+}
+.container {
+	background: rgb(255, 242, 224) !important;
 }
 .login {
 	max-width: 20rem;
 	margin: 0 auto;
 	border: 1px solid #00000037;
 	padding: 30px;
-	background:#212529;
+	background: #212529;
 	color: antiquewhite;
-}
-header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
 }
 
 footer {
@@ -32,9 +24,20 @@ footer {
 	bottom: 0;
 }
 
-.fourZeroFour{
-	background: url('/public/images/404.png');
+.fourZeroFour {
+	background: url("/public/images/404.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+#card {
+	max-width: 30rem;
+	max-height: 30rem;
+	margin: 100px auto ;
+}
+
+
+#card img{
+		width: 50%;
+	}

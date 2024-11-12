@@ -4,12 +4,15 @@ import Navbar from "./Navbar";
 interface HomeProps {}
 
 const Home: FunctionComponent<HomeProps> = () => {
+
 	return (
 		<>
-			<header>
+			<header className='sticky-top w-100'>
 				<Navbar />
 			</header>
-			<h1>Home</h1>
+			<main className='container text-center bg-dark min-vh-100'>
+				<h1>Home</h1>
+			</main>
 		</>
 	);
 };

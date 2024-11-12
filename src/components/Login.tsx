@@ -3,11 +3,12 @@ import {FunctionComponent, useState} from "react";
 import * as yup from "yup";
 import {User} from "../interfaces/User";
 import {Link, useNavigate} from "react-router-dom";
+import {checkUser} from "../services/UserServices";
 
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
-	const [isAdmin, setIsAdmin] = useState<boolean>(false);
+	const [isLogedIn, setIsLogedIn] = useState<boolean>(false);
 	const navigate = useNavigate();
 
 	const formik = useFormik<User>({
@@ -26,14 +27,23 @@ const Login: FunctionComponent<LoginProps> = () => {
 				.min(8, "Password must be at least 8 characters"),
 		}),
 		onSubmit: (values: User) => {
-			setIsAdmin(!isAdmin);
-			localStorage.setItem("kkk", JSON.stringify(true));
-			navigate("/home");
+			checkUser(values).then((res) => {
+				if (res.data.length) {
+					localStorage.setItem("logedIn", JSON.stringify(!isLogedIn));
+					localStorage.setItem("userId", res.data[0].id);
+					navigate("/home");
+				} else {
+					navigate("/");
+					localStorage.setItem("logedIn", JSON.stringify(isLogedIn));
+					localStorage.removeItem("userId");
+					setIsLogedIn(false);
+				}
+			});
 		},
 	});
 
 	return (
-		<div className='login-container'>
+		<main className='container text-center min-vh-100 pt-5'>
 			<div className='login m-auto'>
 				<h3>Login</h3>
 				<form onSubmit={formik.handleSubmit}>
@@ -77,7 +87,7 @@ const Login: FunctionComponent<LoginProps> = () => {
 					New user? <Link to='/registery'>Register</Link>
 				</h5>
 			</div>
-		</div>
+		</main>
 	);
 };
 

@@ -8,8 +8,8 @@ export class LoginState {
 export enum LoginActionType {
 	Login = "LOG_IN",
 	Logout = "LOG_OUT",
-	Registry = "REGISTERY",
-	setAllUsersAction = "Set_All_Users_Action",
+	Register = "REGISTER",
+	SetAllUsers = "SET_ALL_USERS",
 }
 
 export interface LoginAction {
@@ -17,37 +17,41 @@ export interface LoginAction {
 	payload: any;
 }
 
-export function login(login: User): LoginAction {
-	return {type: LoginActionType.Login, payload: login};
+export function login(user: User): LoginAction {
+	return {type: LoginActionType.Login, payload: user};
 }
-export function logout(login: User): LoginAction {
-	return {type: LoginActionType.Logout, payload: login};
+
+export function logout(): LoginAction {
+	// No payload needed for logout
+	return {type: LoginActionType.Logout, payload: null};
 }
-export function registry(user: User): LoginAction {
-	return {type: LoginActionType.Registry, payload: user};
+
+export function register(user: User): LoginAction {
+	return {type: LoginActionType.Register, payload: user};
 }
-export function setAllUsersAction(posts: User[]): LoginAction {
-	return {type: LoginActionType.setAllUsersAction, payload: posts};
+
+export function setAllUsers(users: User[]): LoginAction {
+	return {type: LoginActionType.SetAllUsers, payload: users};
 }
 
 //reducer
 export function loginReducer(
-	currentState: LoginState = new LoginState(),
+	currentState: LoginState = new LoginState(), // Default initial state
 	action: LoginAction,
 ): LoginState {
 	const newState: LoginState = {...currentState};
 
 	switch (action.type) {
 		case LoginActionType.Login:
-			newState.users = [action.payload]; // Store the logged-in user
+			newState.users = [action.payload];
 			break;
 		case LoginActionType.Logout:
-			newState.users = []; // Clear the users on logout
+			newState.users = [];
 			break;
-		case LoginActionType.setAllUsersAction:
+		case LoginActionType.SetAllUsers:
 			newState.users = action.payload;
 			break;
-		case LoginActionType.Registry:
+		case LoginActionType.Register:
 			newState.users.push(action.payload);
 			break;
 		default:
@@ -56,3 +60,4 @@ export function loginReducer(
 
 	return newState;
 }
+

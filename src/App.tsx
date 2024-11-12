@@ -11,10 +11,11 @@ import Products from "./components/Products";
 import Profile from "./components/Profile";
 import Cart from "./components/Cart";
 import PageNotFound from "./components/PageNotFound";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
 	return (
-		<div className='App'>
+		<>
 			<ToastContainer />
 			<Provider store={store}>
 				<Router
@@ -23,21 +24,22 @@ function App() {
 						v7_relativeSplatPath: true,
 					}}
 				>
-					<main>
-						<Routes>
-							<Route path='/' element={<Login />} />
-							<Route path='/home' element={<Home />} />
-							<Route path='/cart' element={<Cart />} />
-							<Route path='/registery' element={<Registry />} />
-							<Route path='/products' element={<Products />} />
-							<Route path='/profile' element={<Profile />} />
-							<Route path='/pageNotFound' element={<PageNotFound />} />
-						</Routes>
-					</main>
+					<Routes>
+						<Route path='/' element={<Login />} />
+						<Route path='/home' element={<Home />} />
+						<Route path='/cart' element={<Cart />} />
+						<Route path='/registery' element={<Registry />} />
+						<Route path='/products' element={<Products />} />
+						<Route path='/productDetails' element={<ProductDetails />}>
+							<Route path=':id' element={<ProductDetails />} />
+						</Route>
+						<Route path='/profile' element={<Profile />} />
+						<Route path='/pageNotFound' element={<PageNotFound />} />
+					</Routes>
 					<footer>Footer</footer>
 				</Router>
 			</Provider>
-		</div>
+		</>
 	);
 }
 

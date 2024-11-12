@@ -5,7 +5,9 @@ interface PageNotFoundProps {}
 const PageNotFound: FunctionComponent<PageNotFoundProps> = () => {
 	return (
 		<>
-			<div className="fourZeroFour"></div>
+			<main className='container text-center'>
+				<div className='fourZeroFour'></div>
+			</main>
 		</>
 	);
 };

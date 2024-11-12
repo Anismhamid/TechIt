@@ -5,96 +5,110 @@
 			"email": "anes@h",
 			"password": "123456789",
 			"isAdmin": false,
-			"id": "9e4a"
+			"id": "1"
 		},
 		{
-			"id": "41a7",
+			"id": "2",
 			"name": "asdasd",
 			"email": "asdas@sdasd",
 			"password": "Aasdasdasdasdasd",
 			"isAdmin": false
 		},
 		{
-			"id": "8d2a",
+			"id": "3",
 			"name": "anes@gmail.com",
 			"email": "aa@aa",
 			"password": "Aaaaaaaaaaaaaaaa",
 			"isAdmin": false
 		},
 		{
-			"id": "9bef",
+			"id": "4",
 			"name": "aaaaa",
 			"email": "anes2@gmail.com",
 			"password": "Aaaaaaaaaaaaaaaaaaa",
 			"isAdmin": false
 		},
 		{
-			"id": "161c",
+			"id": "5",
 			"name": "ssghfh",
 			"email": "anes4@gmail.com",
 			"password": "A12345678",
 			"isAdmin": true
 		},
 		{
-			"id": "0128",
+			"id": "6",
 			"name": "anes",
 			"email": "anis@gmail.com",
 			"password": "A123456789",
 			"isAdmin": true
 		},
 		{
-			"id": "77fd",
+			"id": "7",
 			"name": "aaaaaa",
 			"email": "ans@gmail.com",
 			"password": "A123456789",
 			"isAdmin": true
 		},
 		{
-			"id": "6c3f",
+			"id": "8",
 			"name": "aaaaa",
 			"email": "anisss@gmail.com",
 			"password": "A123456789",
 			"isAdmin": false
 		},
 		{
-			"id": "e86e",
+			"id": "9",
 			"name": "ssss",
 			"email": "anis@a",
 			"password": "A123456789",
 			"isAdmin": false
 		},
 		{
-			"id": "64cc",
+			"id": "10",
 			"name": "ghghjgf",
 			"email": "anis@a",
 			"password": "A123456789",
 			"isAdmin": true
 		},
 		{
-			"id": "eae7",
+			"id": "11",
 			"name": "ghghjgf",
 			"email": "anis@a",
 			"password": "A123456789",
 			"isAdmin": true
 		},
 		{
-			"id": "5674",
+			"id": "12",
 			"name": "fddf",
 			"email": "anis@a",
 			"password": "A123456789",
 			"isAdmin": false
 		},
 		{
-			"id": "f17c",
+			"id": "13",
 			"name": "ahmad",
 			"email": "anis@a",
 			"password": "A123456789",
 			"isAdmin": true
 		},
 		{
-			"id": "97a6",
+			"id": "14",
 			"name": "aaa",
 			"email": "anis@a",
+			"password": "A123456789",
+			"isAdmin": false
+		},
+		{
+			"id": "15",
+			"name": "aaa",
+			"email": "jamele.eshan@gmail.com",
+			"password": "A123456789",
+			"isAdmin": true
+		},
+		{
+			"id": "16",
+			"name": "gggg",
+			"email": "walaa@gmail.com",
 			"password": "A123456789",
 			"isAdmin": false
 		}
@@ -105,35 +119,44 @@
 			"price": 89.99,
 			"category": "Electronics",
 			"image": "https://peimot.com/Cat_471170_17682.jpg",
-			"quantity": 50
+			"quantity": 50,
+			"id": "1",
+			"description": "High-quality wireless headphones with noise cancellation, comfortable ear cups, and long battery life. Perfect for listening to music or making calls on the go."
 		},
 		{
 			"name": "Running Shoes",
 			"price": 59.99,
 			"category": "Sportswear",
 			"image": "https://www.yousport.co.il/wp-content/uploads/2024/06/b0d367_9cf639b184d14f7abc66c60e0f689833mv2-1.webp",
-			"quantity": 30
+			"quantity": 30,
+			"id": "2",
+			"description": "Durable and lightweight running shoes designed for comfort and support. Ideal for long runs or casual workouts, providing excellent grip and stability."
 		},
 		{
 			"name": "Smartwatch",
 			"price": 199.99,
 			"category": "Electronics",
 			"image": "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_SY300_SX300_.jpg",
-			"quantity": 100
+			"quantity": 100,
+			"id": "3",
+			"description": "A sleek and versatile smartwatch with fitness tracking, heart rate monitoring, and smartphone notifications. Stay connected and track your health with ease."
 		},
 		{
 			"name": "Yoga Mat",
-			"price": 25.0,
+			"price": 25,
 			"category": "Sports Equipment",
-			"image": "https://i.ebayimg.com/images/g/MhAAAOSwkttkXJQJ/s-l1600.webp"
+			"image": "https://i.ebayimg.com/images/g/MhAAAOSwkttkXJQJ/s-l1600.webp",
+			"id": "4",
+			"description": "A high-density, non-slip yoga mat that provides excellent cushioning for your joints during yoga, Pilates, or stretching exercises. Easy to clean and portable."
 		},
 		{
 			"name": "Bluetooth Speaker",
 			"price": 45.99,
 			"category": "Electronics",
 			"image": "https://hips.hearstapps.com/hmg-prod/images/reviews-top-portable-bluetooth-speakers-65e883a6d8581.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=980:*",
-			"quantity": 70
+			"quantity": 70,
+			"id": "5",
+			"description": "Portable Bluetooth speaker with clear sound, deep bass, and water resistance. Perfect for outdoor activities, parties, and travel. Connects wirelessly to your phone or device."
 		}
 	]
-
 }

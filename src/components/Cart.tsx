@@ -9,7 +9,9 @@ const Cart: FunctionComponent<CartProps> = () => {
 			<header>
 				<Navbar />
 			</header>
-			<h1>Cart</h1>
+			<main className='container text-center bg-dark min-vh-100'>
+				<h1>Cart</h1>
+			</main>
 		</>
 	);
 };
