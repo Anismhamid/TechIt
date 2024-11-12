@@ -1,102 +1,139 @@
 {
-  "users": [
-    {
-      "name": "anes",
-      "email": "anes@h",
-      "password": "123456789",
-      "isAdmin": false,
-      "id": "9e4a"
-    },
-    {
-      "id": "41a7",
-      "name": "asdasd",
-      "email": "asdas@sdasd",
-      "password": "Aasdasdasdasdasd",
-      "isAdmin": false
-    },
-    {
-      "id": "8d2a",
-      "name": "anes@gmail.com",
-      "email": "aa@aa",
-      "password": "Aaaaaaaaaaaaaaaa",
-      "isAdmin": false
-    },
-    {
-      "id": "9bef",
-      "name": "aaaaa",
-      "email": "anes2@gmail.com",
-      "password": "Aaaaaaaaaaaaaaaaaaa",
-      "isAdmin": false
-    },
-    {
-      "id": "161c",
-      "name": "ssghfh",
-      "email": "anes4@gmail.com",
-      "password": "A12345678",
-      "isAdmin": true
-    },
-    {
-      "id": "0128",
-      "name": "anes",
-      "email": "anis@gmail.com",
-      "password": "A123456789",
-      "isAdmin": true
-    },
-    {
-      "id": "77fd",
-      "name": "aaaaaa",
-      "email": "ans@gmail.com",
-      "password": "A123456789",
-      "isAdmin": true
-    },
-    {
-      "id": "6c3f",
-      "name": "aaaaa",
-      "email": "anisss@gmail.com",
-      "password": "A123456789",
-      "isAdmin": false
-    },
-    {
-      "id": "e86e",
-      "name": "ssss",
-      "email": "anis@a",
-      "password": "A123456789",
-      "isAdmin": false
-    },
-    {
-      "id": "64cc",
-      "name": "ghghjgf",
-      "email": "anis@a",
-      "password": "A123456789",
-      "isAdmin": true
-    },
-    {
-      "id": "eae7",
-      "name": "ghghjgf",
-      "email": "anis@a",
-      "password": "A123456789",
-      "isAdmin": true
-    },
-    {
-      "id": "5674",
-      "name": "fddf",
-      "email": "anis@a",
-      "password": "A123456789",
-      "isAdmin": false
-    },
-    {
-      "id": "f17c",
-      "name": "ahmad",
-      "email": "anis@a",
-      "password": "A123456789",
-      "isAdmin": true
-    },
-    {
-      "id": "97a6",
-      "name": "aaa",
-      "email": "anis@a",
-      "password": "A123456789",
-      "isAdmin": false
-    }
-  ]
+	"users": [
+		{
+			"name": "anes",
+			"email": "anes@h",
+			"password": "123456789",
+			"isAdmin": false,
+			"id": "9e4a"
+		},
+		{
+			"id": "41a7",
+			"name": "asdasd",
+			"email": "asdas@sdasd",
+			"password": "Aasdasdasdasdasd",
+			"isAdmin": false
+		},
+		{
+			"id": "8d2a",
+			"name": "anes@gmail.com",
+			"email": "aa@aa",
+			"password": "Aaaaaaaaaaaaaaaa",
+			"isAdmin": false
+		},
+		{
+			"id": "9bef",
+			"name": "aaaaa",
+			"email": "anes2@gmail.com",
+			"password": "Aaaaaaaaaaaaaaaaaaa",
+			"isAdmin": false
+		},
+		{
+			"id": "161c",
+			"name": "ssghfh",
+			"email": "anes4@gmail.com",
+			"password": "A12345678",
+			"isAdmin": true
+		},
+		{
+			"id": "0128",
+			"name": "anes",
+			"email": "anis@gmail.com",
+			"password": "A123456789",
+			"isAdmin": true
+		},
+		{
+			"id": "77fd",
+			"name": "aaaaaa",
+			"email": "ans@gmail.com",
+			"password": "A123456789",
+			"isAdmin": true
+		},
+		{
+			"id": "6c3f",
+			"name": "aaaaa",
+			"email": "anisss@gmail.com",
+			"password": "A123456789",
+			"isAdmin": false
+		},
+		{
+			"id": "e86e",
+			"name": "ssss",
+			"email": "anis@a",
+			"password": "A123456789",
+			"isAdmin": false
+		},
+		{
+			"id": "64cc",
+			"name": "ghghjgf",
+			"email": "anis@a",
+			"password": "A123456789",
+			"isAdmin": true
+		},
+		{
+			"id": "eae7",
+			"name": "ghghjgf",
+			"email": "anis@a",
+			"password": "A123456789",
+			"isAdmin": true
+		},
+		{
+			"id": "5674",
+			"name": "fddf",
+			"email": "anis@a",
+			"password": "A123456789",
+			"isAdmin": false
+		},
+		{
+			"id": "f17c",
+			"name": "ahmad",
+			"email": "anis@a",
+			"password": "A123456789",
+			"isAdmin": true
+		},
+		{
+			"id": "97a6",
+			"name": "aaa",
+			"email": "anis@a",
+			"password": "A123456789",
+			"isAdmin": false
+		}
+	],
+	"products": [
+		{
+			"name": "Wireless Headphones",
+			"price": 89.99,
+			"category": "Electronics",
+			"image": "https://peimot.com/Cat_471170_17682.jpg",
+			"quantity": 50
+		},
+		{
+			"name": "Running Shoes",
+			"price": 59.99,
+			"category": "Sportswear",
+			"image": "https://www.yousport.co.il/wp-content/uploads/2024/06/b0d367_9cf639b184d14f7abc66c60e0f689833mv2-1.webp",
+			"quantity": 30
+		},
+		{
+			"name": "Smartwatch",
+			"price": 199.99,
+			"category": "Electronics",
+			"image": "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_SY300_SX300_.jpg",
+			"quantity": 100
+		},
+		{
+			"name": "Yoga Mat",
+			"price": 25.0,
+			"category": "Sports Equipment",
+			"image": "https://i.ebayimg.com/images/g/MhAAAOSwkttkXJQJ/s-l1600.webp"
+		},
+		{
+			"name": "Bluetooth Speaker",
+			"price": 45.99,
+			"category": "Electronics",
+			"image": "https://hips.hearstapps.com/hmg-prod/images/reviews-top-portable-bluetooth-speakers-65e883a6d8581.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=980:*",
+			"quantity": 70
+		}
+	]
+
 }

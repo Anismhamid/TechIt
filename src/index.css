@@ -17,15 +17,24 @@
 	margin: 0 auto;
 	border: 1px solid #00000037;
 	padding: 30px;
-	background: #ced4da;
+	background:#212529;
+	color: antiquewhite;
 }
 header {
-	position: fixed;
+	position: absolute;
 	top: 0;
-	min-width: 100%;
+	left: 0;
+	width: 100vw;
 }
 
 footer {
 	position: fixed;
 	bottom: 0;
+}
+
+.fourZeroFour{
+	background: url('/public/images/404.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }

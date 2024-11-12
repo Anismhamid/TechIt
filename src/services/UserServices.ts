@@ -1,10 +1,10 @@
 import axios from "axios";
 import {User} from "../interfaces/User";
 
-const api: string = `${process.env.REACT_APP_API}`;
+const api: string = `${process.env.REACT_APP_API}/users`;
 
-export function getAllUsers() {
-	return axios.get(`${api}/users`);
+export function getAllUsers(user:User) {
+	return axios.get(`${api}?email=${user.email}&&password=${user.password}`);
 }
 
 export function postUser(user: User) {

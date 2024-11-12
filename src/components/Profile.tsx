@@ -1,17 +1,17 @@
 import {FunctionComponent} from "react";
 import Navbar from "./Navbar";
 
-interface HomeProps {}
+interface ProfileProps {}
 
-const Home: FunctionComponent<HomeProps> = () => {
+const Profile: FunctionComponent<ProfileProps> = () => {
 	return (
 		<>
 			<header>
 				<Navbar />
 			</header>
-			<h1>Home</h1>
+			<h1>Profile</h1>
 		</>
 	);
 };
 
-export default Home;
+export default Profile;

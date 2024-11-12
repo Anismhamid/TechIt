@@ -1,33 +1,15 @@
 import {useFormik} from "formik";
-import {FunctionComponent, useEffect, useState} from "react";
+import {FunctionComponent, useState} from "react";
 import * as yup from "yup";
 import {User} from "../interfaces/User";
 import {Link, useNavigate} from "react-router-dom";
-import {getAllUsers} from "../services/UserServices";
-import {useDispatch} from "react-redux";
-import {login, setAllUsersAction} from "../redux/LoginState";
-import {errorMsg, successMsg} from "../services/Toastify";
 
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
+	const [isAdmin, setIsAdmin] = useState<boolean>(false);
 	const navigate = useNavigate();
-	const [users, setUsers] = useState<User[]>([]); // Local state to store users
-	const dispatch = useDispatch();
 
-	// Fetch users on component mount
-	useEffect(() => {
-		getAllUsers()
-			.then((res) => {
-				setUsers(res.data); // Store the fetched users in local state
-				setAllUsersAction(res.data);
-			})
-			.catch((err) => {
-				errorMsg(err);
-			});
-	}, []);
-
-	// Formik setup for login form
 	const formik = useFormik<User>({
 		initialValues: {
 			email: "",
@@ -43,21 +25,10 @@ const Login: FunctionComponent<LoginProps> = () => {
 				.required("Password is required")
 				.min(8, "Password must be at least 8 characters"),
 		}),
-		onSubmit: (values) => {
-			// Find the user in the fetched users list
-			const foundUser = users.find(
-				(user) =>
-					user.email === values.email && user.password === values.password,
-			);
-
-			if (foundUser) {
-				// Dispatch login action if user is found
-				dispatch(login(foundUser) as any);
-				navigate("/home");
-				successMsg("Successfully Loged In");
-			} else {
-				errorMsg("Invalid email or password");
-			}
+		onSubmit: (values: User) => {
+			setIsAdmin(!isAdmin);
+			localStorage.setItem("kkk", JSON.stringify(true));
+			navigate("/home");
 		},
 	});
 

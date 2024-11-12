@@ -1,17 +1,17 @@
 import {FunctionComponent} from "react";
 import Navbar from "./Navbar";
 
-interface HomeProps {}
+interface CartProps {}
 
-const Home: FunctionComponent<HomeProps> = () => {
+const Cart: FunctionComponent<CartProps> = () => {
 	return (
 		<>
 			<header>
 				<Navbar />
 			</header>
-			<h1>Home</h1>
+			<h1>Cart</h1>
 		</>
 	);
 };
 
-export default Home;
+export default Cart;
