@@ -8,8 +8,8 @@ export class LoginState {
 export enum LoginActionType {
 	Login = "LOG_IN",
 	Logout = "LOG_OUT",
-	Register = "REGISTER",
-	SetAllUsers = "SET_ALL_USERS",
+	Registry = "REGISTERY",
+	setAllUsersAction = "Set_All_Users_Action",
 }
 
 export interface LoginAction {
@@ -17,47 +17,40 @@ export interface LoginAction {
 	payload: any;
 }
 
-export function login(user: User): LoginAction {
-	return {type: LoginActionType.Login, payload: user};
+export function login(login: User): LoginAction {
+	return {type: LoginActionType.Login, payload: login};
 }
-
-export function logout(): LoginAction {
-	// No payload needed for logout
-	return {type: LoginActionType.Logout, payload: null};
+export function logout(login: User): LoginAction {
+	return {type: LoginActionType.Logout, payload: login};
 }
-
-export function register(user: User): LoginAction {
-	return {type: LoginActionType.Register, payload: user};
+export function registry(user: User): LoginAction {
+	return {type: LoginActionType.Registry, payload: user};
 }
-
-export function setAllUsers(users: User[]): LoginAction {
-	return {type: LoginActionType.SetAllUsers, payload: users};
+export function setAllUsersAction(posts: User[]): LoginAction {
+	return {type: LoginActionType.setAllUsersAction, payload: posts};
 }
 
 //reducer
 export function loginReducer(
-	currentState: LoginState = new LoginState(), // Default initial state
+	currentState: LoginState = new LoginState(),
 	action: LoginAction,
 ): LoginState {
 	const newState: LoginState = {...currentState};
 
 	switch (action.type) {
 		case LoginActionType.Login:
-			newState.users = [action.payload];
+			newState.users = [action.payload]; // Store the logged-in user
 			break;
 		case LoginActionType.Logout:
-			newState.users = [];
+			newState.users = []; // Clear the users on logout
 			break;
-		case LoginActionType.SetAllUsers:
+		case LoginActionType.setAllUsersAction:
 			newState.users = action.payload;
 			break;
-		case LoginActionType.Register:
+		case LoginActionType.Registry:
 			newState.users.push(action.payload);
-			break;
-		default:
 			break;
 	}
 
 	return newState;
 }
-

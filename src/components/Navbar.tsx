@@ -66,11 +66,12 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
 							<button
 								onClick={() => {
 									navigate("/");
-									localStorage.removeItem("UserId");
 									localStorage.setItem(
-										"LogedIn",
+										"logedIn",
 										JSON.stringify(false),
 									);
+									localStorage.removeItem("admin");
+									localStorage.removeItem("userId");
 								}}
 								className='btn btn-outline-primary'
 							>

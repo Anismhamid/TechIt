@@ -22,7 +22,6 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 			getTheSpicificProduct(id)
 				.then((res) => {
 					setProduct(res.data);
-					console.log("Product image URL:", res.data.image);
 				})
 				.catch((err) => {
 					console.log(err);
@@ -38,7 +37,7 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 			<main className='container pt-5 text-center bg-dark min-vh-100'>
 				{product.length ? (
 					product.map((product) => (
-						<div id='card' className='card py-5'>
+						<div id='card' className='card py-5' key={product.id}>
 							<div className='card-header'>
 								<h5 className='card-title'>{product.name}</h5>
 							</div>
@@ -53,7 +52,7 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 								<h5 className='card-text my-3'>
 									{shekel} {product.price}
 								</h5>
-								<h6 className='card-text my-3'>{product.discription}</h6>
+								<h5 className='card-text my-3'>{product.description}</h5>
 							</div>
 							{user && user.isAdmin ? (
 								<div className='d-grid gap-2 d-md-block'>
@@ -70,7 +69,7 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 							) : (
 								!user?.isAdmin && (
 									<>
-										<div className=' d-flex align-items-center justify-content-around mt-3'>
+										<div className=' mt-5 d-flex align-items-center justify-content-around mt-3'>
 											<button className='btn btn-primary w-25'>
 												Add to Cart
 											</button>

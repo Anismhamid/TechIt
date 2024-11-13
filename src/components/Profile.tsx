@@ -41,7 +41,7 @@ const Profile: FunctionComponent<ProfileProps> = () => {
 							<tbody>
 								{userDetails.length ? (
 									userDetails.map((user) => (
-										<tr>
+										<tr key={user.id}>
 											<td colSpan={4}>{user.name}</td>
 											<td colSpan={4}>{user.email}</td>
 											<td colSpan={4}>

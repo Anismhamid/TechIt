@@ -12,16 +12,17 @@ body {
 }
 .login {
 	max-width: 20rem;
-	margin: 0 auto;
 	border: 1px solid #00000037;
-	padding: 30px;
+	padding: 50px;
 	background: #212529;
 	color: antiquewhite;
+	margin: 100px auto;
 }
 
 footer {
-	position: fixed;
+	position: relative;
 	bottom: 0;
+	text-align: center;
 }
 
 .fourZeroFour {
@@ -34,10 +35,9 @@ footer {
 #card {
 	max-width: 30rem;
 	max-height: 30rem;
-	margin: 100px auto ;
+	margin: auto;
 }
 
-
-#card img{
-		width: 50%;
-	}
+#card img {
+	width: 50%;
+}
