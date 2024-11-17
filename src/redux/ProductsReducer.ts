@@ -23,7 +23,7 @@ export function addItemToProductsRedux(product: Product): ProductsAction {
 	return {type: ProductsActionType.AddProduct, payload: product};
 }
 
-export function updateProduct(product: Product): ProductsAction {
+export function updateProductReducer(product: Product): ProductsAction {
 	return {type: ProductsActionType.UpdateProduct, payload: product};
 }
 

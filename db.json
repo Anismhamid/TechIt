@@ -136,33 +136,6 @@
   ],
   "products": [
     {
-      "id": "1",
-      "name": "Smartphone",
-      "price": 2499,
-      "category": "Electronics",
-      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15450133/extra_large/079ca17f59618549395ad0c7b7b60999.png",
-      "description": "A powerful smartphone with a high-definition camera, fast processor, and long-lasting battery.",
-      "quantity": 1
-    },
-    {
-      "id": "2",
-      "name": "Laptop",
-      "price": 3779,
-      "category": "Electronics",
-      "image": "https://hotstore.hotmobile.co.il/media/catalog/product/cache/a73c0d5d6c75fbb1966fe13af695aeb7/c/0/c08353897_1_xcdcd_2_1.png",
-      "description": "A sleek laptop perfect for work and entertainment with a fast Intel processor and a vibrant display.",
-      "quantity": 1
-    },
-    {
-      "id": "3",
-      "name": "Smartwatch",
-      "price": 199.99,
-      "category": "Electronics",
-      "image": "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_SY300_SX300_.jpg",
-      "description": "A sleek and versatile smartwatch with fitness tracking, heart rate monitoring, and smartphone notifications.",
-      "quantity": 90
-    },
-    {
       "id": "4",
       "name": "Yoga Mat",
       "price": 25,
@@ -408,12 +381,21 @@
   ],
   "cart": [
     {
-      "id": "2",
-      "name": "Laptop",
-      "price": 3779,
+      "id": "1",
+      "name": "Smartphone",
+      "price": 2499,
       "category": "Electronics",
-      "image": "https://hotstore.hotmobile.co.il/media/catalog/product/cache/a73c0d5d6c75fbb1966fe13af695aeb7/c/0/c08353897_1_xcdcd_2_1.png",
-      "description": "A sleek laptop perfect for work and entertainment with a fast Intel processor and a vibrant display.",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15450133/extra_large/079ca17f59618549395ad0c7b7b60999.png",
+      "description": "A powerful smartphone with a high-definition camera, fast processor, and long-lasting battery.",
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "name": "Smartphone",
+      "price": 2499,
+      "category": "Electronics",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15450133/extra_large/079ca17f59618549395ad0c7b7b60999.png",
+      "description": "A powerful smartphone with a high-definition camera, fast processor, and long-lasting battery.",
       "quantity": 1
     },
     {
@@ -424,42 +406,6 @@
       "image": "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_SY300_SX300_.jpg",
       "description": "A sleek and versatile smartwatch with fitness tracking, heart rate monitoring, and smartphone notifications.",
       "quantity": 90
-    },
-    {
-      "id": "4",
-      "name": "Yoga Mat",
-      "price": 25,
-      "category": "Sports Equipment",
-      "image": "https://i.ebayimg.com/images/g/MhAAAOSwkttkXJQJ/s-l1600.webp",
-      "description": "A high-density, non-slip yoga mat that provides excellent cushioning for your joints during exercises.",
-      "quantity": 18
-    },
-    {
-      "id": "5",
-      "name": "Bluetooth Speaker",
-      "price": 49.99,
-      "category": "Electronics",
-      "image": "https://i.rtings.com/assets/pages/bKL4AtS9/best-portable-bluetooth-speakers-20231026-medium.jpg?format=auto",
-      "description": "Portable Bluetooth speaker with rich sound and long battery life.",
-      "quantity": 1
-    },
-    {
-      "id": "6",
-      "name": "Noise-Cancelling Headphones",
-      "price": 1738.99,
-      "category": "Electronics",
-      "image": "https://ikfaudio.com/cdn/shop/files/Solo-Pro-BR.jpg?v=1725094814&width=1200",
-      "description": "Headphones with advanced noise-canceling technology and superior sound quality.",
-      "quantity": 1
-    },
-    {
-      "id": "7",
-      "name": "Fitness Tracker",
-      "price": 79.99,
-      "category": "Electronics",
-      "image": "https://m.media-amazon.com/images/I/71MBwiI4mxL._AC_SL1500_.jpg",
-      "description": "Track your steps, heart rate, and workouts with this stylish fitness tracker.",
-      "quantity": 1
     }
   ]
 }

@@ -2,9 +2,10 @@ import {FunctionComponent, useEffect, useState} from "react";
 import {getTheSpicificProduct} from "../services/ProductsServices";
 import Navbar from "./Navbar";
 import {Product} from "../interfaces/Product";
-import { useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {cart, deleteItem, edit, shekel} from "../fontAwesome/FontAwesome";
 import MiniNav from "./MiniNav";
+import {postProductToCart} from "../services/CartServices";
 
 interface ProductDetailsProps {}
 
@@ -29,10 +30,9 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 	return (
 		<>
 			<header className='sticky-top w-100'>
-				<Navbar  />
+				<Navbar />
 			</header>
 			<main className='container-fluid pt-5 text-center bg-dark min-vh-100'>
-			
 				<h1 className='text-light bg-black'>Product Details</h1>
 				{product.length ? (
 					product.map((product) => (
@@ -53,8 +53,8 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 									<h5 className='card-text my-3'>
 										<span className=' text-success fw-bold display-6'>
 											15%
-										</span>{" "}
-										{shekel}{" "}
+										</span>
+										{shekel}
 										{(
 											(product.price ** product.price /
 												product.price) %
@@ -67,6 +67,9 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 									</h5>
 								)}
 								<button
+									onClick={() => {
+										postProductToCart(product);
+									}}
 									className='btn btn-primary rounded-0'
 									type='button'
 								>
@@ -79,7 +82,10 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 									<button className='btn w-25 btn-warning mx-4'>
 										{edit}
 									</button>
-									<button className='btn w-25 btn-danger my-2'>
+									<button
+										onClick={() => {}}
+										className='btn w-25 btn-danger my-2'
+									>
 										{deleteItem}
 									</button>
 								</div>

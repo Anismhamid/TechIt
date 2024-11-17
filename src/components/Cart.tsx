@@ -1,6 +1,6 @@
 import {FunctionComponent, useEffect, useState} from "react";
 import Navbar from "./Navbar";
-import { deleteItem,minus,plus, shekel} from "../fontAwesome/FontAwesome";
+import {deleteItem, minus, plus, shekel} from "../fontAwesome/FontAwesome";
 import {useDispatch} from "react-redux";
 import {Dispatch} from "@reduxjs/toolkit";
 import {
@@ -95,14 +95,14 @@ const Cart: FunctionComponent<CartProps> = () => {
 									<div className='col'>
 										<button
 											className='btn btn-warning w-50'
-											onClick={() => {}}
+											onClick={() => {}}// 
 										>
 											{plus}
 										</button>
 										<h5 className='px-1'>2</h5>
 										<button
 											className='btn btn-warning w-50'
-											onClick={() => {}}
+											onClick={() => {}}//
 										>
 											{minus}
 										</button>

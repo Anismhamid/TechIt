@@ -1,9 +1,7 @@
 import axios from "axios";
 import {Product} from "../interfaces/Product";
 
-
 const api: string = `${process.env.REACT_APP_API}/products`;
-
 
 export function addNewProducts(product: Product) {
 	return axios.post(api, product);
@@ -20,3 +18,6 @@ export function removeSpicificProductFromProduct(id: string) {
 	return axios.delete(`${api}/${id}`);
 }
 
+export function editSpicificProductFromProduct(payload: Product) {
+	return axios.put(`${api}/${payload.id}`, payload);
+}

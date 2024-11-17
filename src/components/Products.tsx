@@ -1,6 +1,5 @@
 import {FunctionComponent, useEffect} from "react";
 import Navbar from "./Navbar";
-import {Product} from "../interfaces/Product";
 import {
 	getTheProducts,
 	removeSpicificProductFromProduct,
@@ -18,6 +17,8 @@ import {
 	deleteItemFromProductsReducer,
 	setAllProducts,
 } from "../redux/ProductsReducer";
+import {addToCart} from "../redux/CartReducer";
+import EditModal from "./EditModal";
 
 interface ProductsProps {}
 
@@ -70,7 +71,9 @@ const Products: FunctionComponent<ProductsProps> = () => {
 									<button
 										disabled={!product.quantity}
 										onClick={() => {
-											postProductToCart(product);
+											postProductToCart(product).then((res) =>
+												dispatch(addToCart(res.data) as any),
+											);
 											successMsg(
 												"The product has been added to cart",
 											);
@@ -107,9 +110,7 @@ const Products: FunctionComponent<ProductsProps> = () => {
 										</h5>
 										{isAdmin && (
 											<div className='w-100 d-flex align-items-center justify-content-around bg-black'>
-												<button className='btn w-25 btn-warning mx-4'>
-													{edit}
-												</button>
+												<EditModal />
 												<button
 													onClick={() =>
 														handleDelete(product.id as string)
