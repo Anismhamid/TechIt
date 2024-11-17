@@ -36,7 +36,6 @@ function App() {
 						<Route path='/profile' element={<Profile />} />
 						<Route path='/pageNotFound' element={<PageNotFound />} />
 					</Routes>
-					<footer>Footer</footer>
 				</Router>
 			</Provider>
 		</>

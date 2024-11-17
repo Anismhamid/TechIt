@@ -2,20 +2,17 @@ import {FunctionComponent, useEffect, useState} from "react";
 import {getTheSpicificProduct} from "../services/ProductsServices";
 import Navbar from "./Navbar";
 import {Product} from "../interfaces/Product";
-import {useNavigate, useParams} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faShekelSign} from "@fortawesome/free-solid-svg-icons";
-import {useSelector} from "react-redux";
-import {LoginState} from "../redux/LoginState";
+import { useNavigate, useParams} from "react-router-dom";
+import {cart, deleteItem, edit, shekel} from "../fontAwesome/FontAwesome";
+import MiniNav from "./MiniNav";
 
 interface ProductDetailsProps {}
 
 const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 	const {id} = useParams();
-	const user = useSelector((state: {Login: LoginState}) => state.Login?.users[0]);
+	const admin = localStorage.getItem("admin");
 	const navigate = useNavigate();
 	const [product, setProduct] = useState<Product[]>([]);
-	const shekel = <FontAwesomeIcon icon={faShekelSign} />;
 
 	useEffect(() => {
 		if (id) {
@@ -32,9 +29,11 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 	return (
 		<>
 			<header className='sticky-top w-100'>
-				<Navbar />
+				<Navbar  />
 			</header>
-			<main className='container pt-5 text-center bg-dark min-vh-100'>
+			<main className='container-fluid pt-5 text-center bg-dark min-vh-100'>
+			
+				<h1 className='text-light bg-black'>Product Details</h1>
 				{product.length ? (
 					product.map((product) => (
 						<div id='card' className='card py-5' key={product.id}>
@@ -49,49 +48,57 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = () => {
 										alt={product.name || "Product Image"}
 									/>
 								</div>
-								<h5 className='card-text my-3'>
-									{shekel} {product.price}
-								</h5>
+
+								{admin ? (
+									<h5 className='card-text my-3'>
+										<span className=' text-success fw-bold display-6'>
+											15%
+										</span>{" "}
+										{shekel}{" "}
+										{(
+											(product.price ** product.price /
+												product.price) %
+											50
+										).toFixed(2)}
+									</h5>
+								) : (
+									<h5 className='card-text my-3'>
+										{shekel} {product.price}
+									</h5>
+								)}
+								<button
+									className='btn btn-primary rounded-0'
+									type='button'
+								>
+									{cart}Add to cart
+								</button>
 								<h5 className='card-text my-3'>{product.description}</h5>
 							</div>
-							{user && user.isAdmin ? (
-								<div className='d-grid gap-2 d-md-block'>
-									<button className='btn btn-primary' type='button'>
-										Add Item
+							{admin && (
+								<div className='w-100 d-flex align-items-center justify-content-around bg-black'>
+									<button className='btn w-25 btn-warning mx-4'>
+										{edit}
 									</button>
-									<button
-										className='btn btn-primary mx-5'
-										type='button'
-									>
-										Edit Item
+									<button className='btn w-25 btn-danger my-2'>
+										{deleteItem}
 									</button>
 								</div>
-							) : (
-								!user?.isAdmin && (
-									<>
-										<div className=' mt-5 d-flex align-items-center justify-content-around mt-3'>
-											<button className='btn btn-primary w-25'>
-												Add to Cart
-											</button>
-											<button className='btn btn-primary w-25 mx-2'>
-												more..
-											</button>
-										</div>
-										<button
-											onClick={() => navigate(-1)}
-											className='btn btn-dark w-50 m-auto mt-5'
-											type='button'
-										>
-											back
-										</button>
-									</>
-								)
 							)}
+							<div className=' card-footer'>
+								<button
+									onClick={() => navigate(-1)}
+									className='btn btn-dark w-50 m-auto mt-5'
+									type='button'
+								>
+									back
+								</button>
+							</div>
 						</div>
 					))
 				) : (
 					<p>No Data</p>
 				)}
+				<MiniNav />
 			</main>
 		</>
 	);

@@ -30,7 +30,7 @@ const Login: FunctionComponent<LoginProps> = () => {
 			checkUser(values).then((res) => {
 				if (res.data.length) {
 					localStorage.setItem("logedIn", JSON.stringify(!isLogedIn));
-					localStorage.setItem("admin", JSON.stringify(res.data[0].isAdmin));
+					localStorage.setItem("admin", res.data[0].isAdmin);
 					localStorage.setItem("userId", res.data[0].id);
 					navigate("/home");
 				} else {
@@ -44,7 +44,7 @@ const Login: FunctionComponent<LoginProps> = () => {
 	return (
 		<main className='container text-center pt-5 min-vh-100'>
 			<div className='login'>
-				<h3>Login</h3>
+				<h3 className='text-light'>Login</h3>
 				<form onSubmit={formik.handleSubmit}>
 					<div className='form-group'>
 						<input

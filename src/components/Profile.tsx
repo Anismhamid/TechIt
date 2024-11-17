@@ -2,6 +2,7 @@ import {FunctionComponent, useEffect, useState} from "react";
 import Navbar from "./Navbar";
 import {getUserById} from "../services/UserServices";
 import {User} from "../interfaces/User";
+import MiniNav from "./MiniNav";
 
 interface ProfileProps {}
 
@@ -26,11 +27,12 @@ const Profile: FunctionComponent<ProfileProps> = () => {
 			<header className='sticky-top w-100'>
 				<Navbar />
 			</header>
-			<main className='container text-center bg-dark min-vh-100'>
-				<h1 className=''>Profile</h1>
+			<main className='container-fluid text-center bg-dark min-vh-100'>
+				<MiniNav />
+				<h1 className='text-light bg-black'>Profile</h1>
 				<div className='my-5 text-start'>
 					{userDetails.length ? (
-						<table className='table table-striped'>
+						<table className='table table-striped w-75 m-auto'>
 							<thead>
 								<tr>
 									<th colSpan={4}>name</th>

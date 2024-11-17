@@ -44,7 +44,7 @@ const Registry: FunctionComponent<RegistryProps> = () => {
 		<>
 			<main className='container text-center pt-5 min-vh-100'>
 				<div className='login'>
-					<h3>CREATE NEW USER</h3>
+					<h3 className='text-light'>CREATE NEW USER</h3>
 					<form onSubmit={formik.handleSubmit}>
 						<input
 							type='text'

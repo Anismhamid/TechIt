@@ -1,8 +1,21 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {loginReducer} from "./LoginState";
+import {cartReducer} from "./CartReducer";
+import {loginReducer} from "./LoginReducer";
+import {productsReducer} from "./ProductsReducer";
 
-const reducer = combineReducers({loginState: loginReducer});
+const rootReducer = combineReducers({
+	products: productsReducer,
+	cart: cartReducer,
+	login: loginReducer,
+});
 
-const store = configureStore({reducer});
+export const store = configureStore({
+	reducer: rootReducer,
+
+	middleware: (getDefaultMiddleware) =>
+		getDefaultMiddleware({
+			serializableCheck: false,
+		}),
+});
 
 export default store;

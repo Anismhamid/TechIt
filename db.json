@@ -1,162 +1,356 @@
 {
-	"users": [
-		{
-			"name": "anes",
-			"email": "anes@h",
-			"password": "123456789",
-			"isAdmin": false,
-			"id": "1"
-		},
-		{
-			"id": "2",
-			"name": "asdasd",
-			"email": "asdas@sdasd",
-			"password": "Aasdasdasdasdasd",
-			"isAdmin": false
-		},
-		{
-			"id": "3",
-			"name": "anes@gmail.com",
-			"email": "aa@aa",
-			"password": "Aaaaaaaaaaaaaaaa",
-			"isAdmin": false
-		},
-		{
-			"id": "4",
-			"name": "aaaaa",
-			"email": "anes2@gmail.com",
-			"password": "Aaaaaaaaaaaaaaaaaaa",
-			"isAdmin": false
-		},
-		{
-			"id": "5",
-			"name": "ssghfh",
-			"email": "anes4@gmail.com",
-			"password": "A12345678",
-			"isAdmin": true
-		},
-		{
-			"id": "6",
-			"name": "anes",
-			"email": "anis@gmail.com",
-			"password": "A123456789",
-			"isAdmin": true
-		},
-		{
-			"id": "7",
-			"name": "aaaaaa",
-			"email": "ans@gmail.com",
-			"password": "A123456789",
-			"isAdmin": true
-		},
-		{
-			"id": "8",
-			"name": "aaaaa",
-			"email": "anisss@gmail.com",
-			"password": "A123456789",
-			"isAdmin": false
-		},
-		{
-			"id": "9",
-			"name": "ssss",
-			"email": "anis@a",
-			"password": "A123456789",
-			"isAdmin": false
-		},
-		{
-			"id": "10",
-			"name": "ghghjgf",
-			"email": "anis@a",
-			"password": "A123456789",
-			"isAdmin": true
-		},
-		{
-			"id": "11",
-			"name": "ghghjgf",
-			"email": "anis@a",
-			"password": "A123456789",
-			"isAdmin": true
-		},
-		{
-			"id": "12",
-			"name": "fddf",
-			"email": "anis@a",
-			"password": "A123456789",
-			"isAdmin": false
-		},
-		{
-			"id": "13",
-			"name": "ahmad",
-			"email": "anis@a",
-			"password": "A123456789",
-			"isAdmin": true
-		},
-		{
-			"id": "14",
-			"name": "aaa",
-			"email": "anis@a",
-			"password": "A123456789",
-			"isAdmin": false
-		},
-		{
-			"id": "15",
-			"name": "aaa",
-			"email": "jamele.eshan@gmail.com",
-			"password": "A123456789",
-			"isAdmin": true
-		},
-		{
-			"id": "16",
-			"name": "gggg",
-			"email": "walaa@gmail.com",
-			"password": "A123456789",
-			"isAdmin": false
-		}
-	],
-	"products": [
-		{
-			"name": "Wireless Headphones",
-			"price": 89.99,
-			"category": "Electronics",
-			"image": "https://peimot.com/Cat_471170_17682.jpg",
-			"quantity": 50,
-			"id": "1",
-			"description": "High-quality wireless headphones with noise cancellation, comfortable ear cups, and long battery life. Perfect for listening to music or making calls on the go."
-		},
-		{
-			"name": "Running Shoes",
-			"price": 59.99,
-			"category": "Sportswear",
-			"image": "https://www.yousport.co.il/wp-content/uploads/2024/06/b0d367_9cf639b184d14f7abc66c60e0f689833mv2-1.webp",
-			"quantity": 30,
-			"id": "2",
-			"description": "Durable and lightweight running shoes designed for comfort and support. Ideal for long runs or casual workouts, providing excellent grip and stability."
-		},
-		{
-			"name": "Smartwatch",
-			"price": 199.99,
-			"category": "Electronics",
-			"image": "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_SY300_SX300_.jpg",
-			"quantity": 100,
-			"id": "3",
-			"description": "A sleek and versatile smartwatch with fitness tracking, heart rate monitoring, and smartphone notifications. Stay connected and track your health with ease."
-		},
-		{
-			"name": "Yoga Mat",
-			"price": 25,
-			"category": "Sports Equipment",
-			"image": "https://i.ebayimg.com/images/g/MhAAAOSwkttkXJQJ/s-l1600.webp",
-			"id": "4",
-			"description": "A high-density, non-slip yoga mat that provides excellent cushioning for your joints during yoga, Pilates, or stretching exercises. Easy to clean and portable."
-		},
-		{
-			"name": "Bluetooth Speaker",
-			"price": 45.99,
-			"category": "Electronics",
-			"image": "https://hips.hearstapps.com/hmg-prod/images/reviews-top-portable-bluetooth-speakers-65e883a6d8581.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=980:*",
-			"quantity": 70,
-			"id": "5",
-			"description": "Portable Bluetooth speaker with clear sound, deep bass, and water resistance. Perfect for outdoor activities, parties, and travel. Connects wirelessly to your phone or device."
-		}
-	]
+  "users": [
+    {
+      "name": "anes",
+      "email": "anes@h",
+      "password": "123456789",
+      "isAdmin": false,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "asdasd",
+      "email": "asdas@sdasd",
+      "password": "Aasdasdasdasdasd",
+      "isAdmin": false
+    },
+    {
+      "id": "3",
+      "name": "anes@gmail.com",
+      "email": "aa@aa",
+      "password": "Aaaaaaaaaaaaaaaa",
+      "isAdmin": false
+    },
+    {
+      "id": "4",
+      "name": "aaaaa",
+      "email": "anes2@gmail.com",
+      "password": "Aaaaaaaaaaaaaaaaaaa",
+      "isAdmin": false
+    },
+    {
+      "id": "5",
+      "name": "ssghfh",
+      "email": "anes4@gmail.com",
+      "password": "A12345678",
+      "isAdmin": false
+    },
+    {
+      "id": "6",
+      "name": "anes",
+      "email": "anis@gmail.com",
+      "password": "A123456789",
+      "isAdmin": true
+    },
+    {
+      "id": "7",
+      "name": "aaaaaa",
+      "email": "ans@gmail.com",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "8",
+      "name": "aaaaa",
+      "email": "anisss@gmail.com",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "9",
+      "name": "ssss",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "10",
+      "name": "ghghjgf",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": true
+    },
+    {
+      "id": "11",
+      "name": "ghghjgf",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "12",
+      "name": "fddf",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "13",
+      "name": "ahmad",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "14",
+      "name": "aaa",
+      "email": "anis@a",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "15",
+      "name": "aaa",
+      "email": "jamele.eshan@gmail.com",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "16",
+      "name": "gggg",
+      "email": "walaa@gmail.com",
+      "password": "A123456789",
+      "isAdmin": false
+    },
+    {
+      "id": "a57d",
+      "name": "sssssss",
+      "email": "anes@gmail.com",
+      "password": "Asdfdghkiluuty",
+      "isAdmin": false
+    },
+    {
+      "id": "7776",
+      "name": "hhhh",
+      "email": "hhhh@gmail.com",
+      "password": "Asdfdghkiluuty",
+      "isAdmin": false
+    },
+    {
+      "id": "1a8c",
+      "name": "qqq",
+      "email": "anis2@gmail.com",
+      "password": "A123456789",
+      "isAdmin": true
+    }
+  ],
+  "products": [
+    {
+      "id": "3",
+      "name": "Smartwatch",
+      "price": 199.99,
+      "category": "Electronics",
+      "image": "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_SY300_SX300_.jpg",
+      "description": "A sleek and versatile smartwatch with fitness tracking, heart rate monitoring, and smartphone notifications.",
+      "quantity": 90
+    },
+    {
+      "id": "4",
+      "name": "Yoga Mat",
+      "price": 25,
+      "category": "Sports Equipment",
+      "image": "https://i.ebayimg.com/images/g/MhAAAOSwkttkXJQJ/s-l1600.webp",
+      "description": "A high-density, non-slip yoga mat that provides excellent cushioning for your joints during exercises.",
+      "quantity": 18
+    },
+    {
+      "id": "5",
+      "name": "Bluetooth Speaker",
+      "price": 49.99,
+      "category": "Electronics",
+      "image": "https://i.rtings.com/assets/pages/bKL4AtS9/best-portable-bluetooth-speakers-20231026-medium.jpg?format=auto",
+      "description": "Portable Bluetooth speaker with rich sound and long battery life.",
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "name": "Noise-Cancelling Headphones",
+      "price": 1738.99,
+      "category": "Electronics",
+      "image": "https://ikfaudio.com/cdn/shop/files/Solo-Pro-BR.jpg?v=1725094814&width=1200",
+      "description": "Headphones with advanced noise-canceling technology and superior sound quality.",
+      "quantity": 1
+    },
+    {
+      "id": "7",
+      "name": "Fitness Tracker",
+      "price": 79.99,
+      "category": "Electronics",
+      "image": "https://m.media-amazon.com/images/I/71MBwiI4mxL._AC_SL1500_.jpg",
+      "description": "Track your steps, heart rate, and workouts with this stylish fitness tracker.",
+      "quantity": 0
+    },
+    {
+      "id": "8",
+      "name": "Digital Camera",
+      "price": 399.99,
+      "category": "Electronics",
+      "image": "https://m.media-amazon.com/images/I/71x06rvOIEL._AC_SL1500_.jpg",
+      "description": "Capture high-quality photos with this easy-to-use digital camera.",
+      "quantity": 1
+    },
+    {
+      "id": "9",
+      "name": "Electric Kettle",
+      "price": 29.99,
+      "category": "Home Appliances",
+      "image": "https://m.media-amazon.com/images/I/611WXU3wOHL._AC_SL1500_.jpg",
+      "description": "Quickly boil water with this electric kettle, perfect for tea or coffee.",
+      "quantity": 0
+    },
+    {
+      "id": "10",
+      "name": "Coffee Maker",
+      "price": 79.99,
+      "category": "Home Appliances",
+      "image": "https://m.media-amazon.com/images/I/71+GzFFP7oL._AC_SL1500_.jpg",
+      "description": "Brew your perfect cup of coffee with this easy-to-use coffee maker.",
+      "quantity": 1
+    },
+    {
+      "id": "11",
+      "name": "Smart Home Lightbulb",
+      "price": 19.99,
+      "category": "Home Electronics",
+      "image": "https://m.media-amazon.com/images/I/61WOa4NtM8L._AC_SL1500_.jpg",
+      "description": "Control the lighting in your home remotely with this smart bulb.",
+      "quantity": 0
+    },
+    {
+      "id": "12",
+      "name": "Robot Vacuum Cleaner",
+      "price": 299.99,
+      "category": "Home Appliances",
+      "image": "https://m.media-amazon.com/images/I/81l8WOosOJL._AC_SL1500_.jpg",
+      "description": "Let the robot vacuum clean your floors with advanced mapping and cleaning technology.",
+      "quantity": 1
+    },
+    {
+      "id": "13",
+      "name": "Electric Toothbrush",
+      "price": 39.99,
+      "category": "Health & Beauty",
+      "image": "https://m.media-amazon.com/images/I/81bV1GyFWPL._SL1500_.jpg",
+      "description": "Achieve cleaner teeth and healthier gums with this electric toothbrush.",
+      "quantity": 1
+    },
+    {
+      "id": "14",
+      "name": "Air Purifier",
+      "price": 129.99,
+      "category": "Home Appliances",
+      "image": "https://s.alicdn.com/@sc04/kf/H592fed7b68364b979b0cecc7611747f8Z.jpg_720x720q50.jpg",
+      "description": "Keep your home fresh and clean with this efficient air purifier.",
+      "quantity": 1
+    },
+    {
+      "id": "15",
+      "name": "Gaming Console",
+      "price": 299.99,
+      "category": "Electronics",
+      "image": "https://ae-pic-a1.aliexpress-media.com/kf/S904a234e79bd42818624332ec9f0b97eh/X80-7-tft800-480-hd-3000.jpg_.webp",
+      "description": "Enjoy the latest video games with this next-gen gaming console.",
+      "quantity": 1
+    },
+    {
+      "id": "16",
+      "name": "HD Television",
+      "price": 799.99,
+      "category": "Electronics",
+      "image": "https://elementelectronics.com/sites/default/files/styles/product_main_square/public/product/images/2023-06/E500AC50C_FrontA.webp?itok=ORid22AM",
+      "description": "Enjoy crisp and vibrant picture quality with this 4K HD television.",
+      "quantity": 0
+    },
+    {
+      "id": "17",
+      "name": "Smart Thermostat",
+      "price": 129.99,
+      "category": "Home Electronics",
+      "image": "https://www.dandbclimatecare.com/wp-content/webp-express/webp-images/uploads/2021/12/person-using-a-smart-phone-application-cooling-down-the-room-with-a-picture-id1246911038.jpg.webp",
+      "description": "Control the temperature of your home remotely with this smart thermostat.",
+      "quantity": 1
+    },
+    {
+      "id": "19",
+      "name": "Portable Power Bank",
+      "price": 29.99,
+      "category": "Electronics",
+      "image": "https://m.media-amazon.com/images/I/61sLYlOjOzL._AC_SL1000_.jpg",
+      "description": "Keep your devices charged on the go with this portable power bank.",
+      "quantity": 1
+    },
+    {
+      "id": "20",
+      "name": "Table Lamp",
+      "price": 19.99,
+      "category": "Home Decor",
+      "image": "https://m.media-amazon.com/images/I/71nuxauPMsL._AC_SL1500_.jpg",
+      "description": "Add a warm ambiance to your room with this stylish table lamp.",
+      "quantity": 1
+    },
+    {
+      "id": "21",
+      "name": "Desk Chair",
+      "price": 129.99,
+      "category": "Furniture",
+      "image": "https://bokefurniture.com/wp-content/uploads/2024/06/Ergonomic-office-chair-with-mesh-back.jpg",
+      "description": "Comfortable ergonomic chair for your home office or workspace.",
+      "quantity": 1
+    },
+    {
+      "id": "22",
+      "name": "LED Desk Light",
+      "price": 39.99,
+      "category": "Home Decor",
+      "image": "https://m.media-amazon.com/images/I/71J49U5FEjL._AC_SL1500_.jpg",
+      "description": "Brighten your workspace with this energy-efficient LED desk light.",
+      "quantity": 1
+    },
+    {
+      "id": "23",
+      "name": "Fridge",
+      "price": 899.99,
+      "category": "Home Appliances",
+      "image": "https://ae-pic-a1.aliexpress-media.com/kf/S0aa758e5b0f04e8ab80af99081bb88e9k/7-4-CU-Refrigerator-with-Freezer-Apartment-Size-Refrigerator-Top-Freezer-2-Door-Fridge-with-Adjustable.jpg_.webp",
+      "description": "Keep your food fresh with this spacious and energy-efficient fridge.",
+      "quantity": 0
+    },
+    {
+      "id": "24",
+      "name": "Blender",
+      "price": 449.99,
+      "category": "Kitchen Appliances",
+      "image": "https://assets.bonappetit.com/photos/63d3193b7d3b2da7813c5319/16:9/w_960,c_limit/VitaMIx.jpg",
+      "description": "Make smoothies, soups, and more with this powerful blender.",
+      "quantity": 1
+    },
+    {
+      "id": "26",
+      "name": "Washing Machine",
+      "price": 499.99,
+      "category": "Home Appliances",
+      "image": "https://static.independent.co.uk/2024/07/09/09/best-washing-machines-review-indybest-2024.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp",
+      "description": "Efficient washing machine that saves time and energy.",
+      "quantity": 1
+    },
+    {
+      "id": "1443",
+      "name": "ananan",
+      "category": "roos",
+      "image": "https://cms.imgworlds.com/assets/74c11e9e-58fe-4aaa-b607-bacc2496c929.jpg?key=promo-image",
+      "description": "sadfsfcdzc",
+      "price": 21,
+      "quantity": 3
+    },
+    {
+      "id": "8355",
+      "name": "يسسييس",
+      "category": "مكمكنكم",
+      "image": "ص",
+      "description": "تالاتلناتو",
+      "price": 595695,
+      "quantity": 5652
+    }
+  ],
+  "cart": []
 }
