@@ -1,12 +1,11 @@
 // products reducer
 import {Product} from "../interfaces/Product";
 
-export interface ProductsState {
-	products: Product[];
+export class ProductsState {
+	public productss: Product[] = [];
 }
-const initialState: ProductsState = {
-	products: [],
-};
+
+
 
 export enum ProductsActionType {
 	AddProduct = "AddProduct",
@@ -17,7 +16,7 @@ export enum ProductsActionType {
 
 export interface ProductsAction {
 	type: ProductsActionType;
-	payload: any;
+	payload: Product[] | Product | number;
 }
 
 export function addItemToProductsRedux(product: Product): ProductsAction {
@@ -28,8 +27,8 @@ export function updateProduct(product: Product): ProductsAction {
 	return {type: ProductsActionType.UpdateProduct, payload: product};
 }
 
-export function deleteItemFromProductsReducer(product: Product): ProductsAction {
-	return {type: ProductsActionType.DeleteProduct, payload: product};
+export function deleteItemFromProductsReducer(id: number): ProductsAction {
+	return {type: ProductsActionType.DeleteProduct, payload: id};
 }
 
 export function setAllProducts(products: Product[]): ProductsAction {
@@ -37,30 +36,37 @@ export function setAllProducts(products: Product[]): ProductsAction {
 }
 
 export function productsReducer(
-	currentState: ProductsState = initialState,
+	currentState: ProductsState = new ProductsState(),
 	action: ProductsAction,
 ): ProductsState {
 	const newState: ProductsState = {
 		...currentState,
-		products: {...currentState.products},
+		productss: [...currentState.productss],
 	};
 
 	switch (action.type) {
 		case ProductsActionType.AddProduct:
-			newState.products.push();
+			newState.productss.push(action.payload as Product);
 			break;
 
 		case ProductsActionType.UpdateProduct:
-			const indexToUpdate = newState.products.findIndex(
-				(p: Product) => p.id === action.payload.id,
+			const updatedProduct = action.payload as Product;
+			const indexToUpdate = newState.productss.findIndex(
+				(p: Product) => p.id === updatedProduct.id,
 			);
-			newState.products.splice(indexToUpdate, 1, action.payload);
+			newState.productss[indexToUpdate] = action.payload as Product;
 			break;
 
 		case ProductsActionType.DeleteProduct:
+			const idToDelete = action.payload as Product;
+			let indexToDelete = newState.productss.findIndex(
+				(p: Product) => p.id === idToDelete.id,
+			);
+			newState.productss.splice(indexToDelete, 1);
 			break;
 
 		case ProductsActionType.SetAllProducts:
+			newState.productss = action.payload as Product[];
 			break;
 
 		default:

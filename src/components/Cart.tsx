@@ -1,7 +1,7 @@
 import {FunctionComponent, useEffect, useState} from "react";
 import Navbar from "./Navbar";
 import { deleteItem,minus,plus, shekel} from "../fontAwesome/FontAwesome";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {Dispatch} from "@reduxjs/toolkit";
 import {
 	formattedPrice,
@@ -86,22 +86,22 @@ const Cart: FunctionComponent<CartProps> = () => {
 											</Link>
 										</p>
 									</div>
-									{/* <div className='col'>{product.description}</div> */}
+									<div className='col'>{product.description}</div>
 									<div className='col'>
 										<p className='text-success'>
-											{shekel} {product.price.toLocaleString()}
+											{shekel} {product.price}
 										</p>
 									</div>
 									<div className='col'>
 										<button
-											className='btn btn-warning w-25'
+											className='btn btn-warning w-50'
 											onClick={() => {}}
 										>
 											{plus}
 										</button>
 										<h5 className='px-1'>2</h5>
 										<button
-											className='btn btn-warning w-25'
+											className='btn btn-warning w-50'
 											onClick={() => {}}
 										>
 											{minus}

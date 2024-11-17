@@ -136,6 +136,24 @@
   ],
   "products": [
     {
+      "id": "1",
+      "name": "Smartphone",
+      "price": 2499,
+      "category": "Electronics",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15450133/extra_large/079ca17f59618549395ad0c7b7b60999.png",
+      "description": "A powerful smartphone with a high-definition camera, fast processor, and long-lasting battery.",
+      "quantity": 1
+    },
+    {
+      "id": "2",
+      "name": "Laptop",
+      "price": 3779,
+      "category": "Electronics",
+      "image": "https://hotstore.hotmobile.co.il/media/catalog/product/cache/a73c0d5d6c75fbb1966fe13af695aeb7/c/0/c08353897_1_xcdcd_2_1.png",
+      "description": "A sleek laptop perfect for work and entertainment with a fast Intel processor and a vibrant display.",
+      "quantity": 1
+    },
+    {
       "id": "3",
       "name": "Smartwatch",
       "price": 199.99,
@@ -178,7 +196,7 @@
       "category": "Electronics",
       "image": "https://m.media-amazon.com/images/I/71MBwiI4mxL._AC_SL1500_.jpg",
       "description": "Track your steps, heart rate, and workouts with this stylish fitness tracker.",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "8",
@@ -196,7 +214,7 @@
       "category": "Home Appliances",
       "image": "https://m.media-amazon.com/images/I/611WXU3wOHL._AC_SL1500_.jpg",
       "description": "Quickly boil water with this electric kettle, perfect for tea or coffee.",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "10",
@@ -214,7 +232,7 @@
       "category": "Home Electronics",
       "image": "https://m.media-amazon.com/images/I/61WOa4NtM8L._AC_SL1500_.jpg",
       "description": "Control the lighting in your home remotely with this smart bulb.",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "12",
@@ -259,7 +277,7 @@
       "category": "Electronics",
       "image": "https://elementelectronics.com/sites/default/files/styles/product_main_square/public/product/images/2023-06/E500AC50C_FrontA.webp?itok=ORid22AM",
       "description": "Enjoy crisp and vibrant picture quality with this 4K HD television.",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "17",
@@ -268,6 +286,15 @@
       "category": "Home Electronics",
       "image": "https://www.dandbclimatecare.com/wp-content/webp-express/webp-images/uploads/2021/12/person-using-a-smart-phone-application-cooling-down-the-room-with-a-picture-id1246911038.jpg.webp",
       "description": "Control the temperature of your home remotely with this smart thermostat.",
+      "quantity": 1
+    },
+    {
+      "id": "18",
+      "name": "Electric Grill",
+      "price": 89.99,
+      "category": "Home Appliances",
+      "image": "https://i.ebayimg.com/images/g/qPYAAOSw1O1kOYJI/s-l1600.webp",
+      "description": "Grill your favorite foods indoors with this electric grill.",
       "quantity": 1
     },
     {
@@ -313,7 +340,7 @@
       "category": "Home Appliances",
       "image": "https://ae-pic-a1.aliexpress-media.com/kf/S0aa758e5b0f04e8ab80af99081bb88e9k/7-4-CU-Refrigerator-with-Freezer-Apartment-Size-Refrigerator-Top-Freezer-2-Door-Fridge-with-Adjustable.jpg_.webp",
       "description": "Keep your food fresh with this spacious and energy-efficient fridge.",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "24",
@@ -322,6 +349,15 @@
       "category": "Kitchen Appliances",
       "image": "https://assets.bonappetit.com/photos/63d3193b7d3b2da7813c5319/16:9/w_960,c_limit/VitaMIx.jpg",
       "description": "Make smoothies, soups, and more with this powerful blender.",
+      "quantity": 1
+    },
+    {
+      "id": "25",
+      "name": "Toaster",
+      "price": 19.99,
+      "category": "Kitchen Appliances",
+      "image": "https://ae-pic-a1.aliexpress-media.com/kf/S35e56b92169c414e8cbb6996dd428d34F/2-Slices-Automatic-Fast-Heating-Bread-Toaster-750W-Stainless-Steel-Electric-Toaster-Breakfast-Machine-for-Sandwich.jpg_.webp",
+      "description": "Perfectly toasted bread every time with this sleek toaster.",
       "quantity": 1
     },
     {
@@ -334,23 +370,96 @@
       "quantity": 1
     },
     {
-      "id": "1443",
-      "name": "ananan",
-      "category": "roos",
-      "image": "https://cms.imgworlds.com/assets/74c11e9e-58fe-4aaa-b607-bacc2496c929.jpg?key=promo-image",
-      "description": "sadfsfcdzc",
-      "price": 21,
-      "quantity": 3
+      "id": "27",
+      "name": "Couch",
+      "price": 799.99,
+      "category": "Furniture",
+      "image": "https://www.myjapanesehome.com/cdn/shop/collections/couch.jpg?v=1553018167&width=535",
+      "description": "Comfortable couch to relax and unwind with family and friends.",
+      "quantity": 1
     },
     {
-      "id": "8355",
-      "name": "يسسييس",
-      "category": "مكمكنكم",
-      "image": "ص",
-      "description": "تالاتلناتو",
-      "price": 595695,
-      "quantity": 5652
+      "id": "28",
+      "name": "Bookshelf",
+      "price": 129.99,
+      "category": "Furniture",
+      "image": "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2015/2/25/0/Harmony-Weihs_Reading-Corner-Library_4.jpg.rend.hgtvcom.616.616.85.suffix/1424904318182.webp",
+      "description": "Stylish bookshelf to organize your books and decor.",
+      "quantity": 1
+    },
+    {
+      "id": "29",
+      "name": "Wall Art",
+      "price": 59.99,
+      "category": "Home Decor",
+      "image": "https://i0.wp.com/usefuldiyprojects.com/wp-content/uploads/2022/11/Unique-Wall-Art-Ideas-to-Add-Personality-to-Your-Home.jpg?resize=1140%2C760&ssl=1",
+      "description": "Add personality to your walls with this beautiful piece of wall art.",
+      "quantity": 1
+    },
+    {
+      "id": "30",
+      "name": "Outdoor Grill",
+      "price": 599.99,
+      "category": "Outdoor Equipment",
+      "image": "https://m.media-amazon.com/images/I/61edf9GF7ML._AC_SY450_.jpg",
+      "description": "Grill your favorite meals outdoors with this high-quality grill.",
+      "quantity": 1
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "2",
+      "name": "Laptop",
+      "price": 3779,
+      "category": "Electronics",
+      "image": "https://hotstore.hotmobile.co.il/media/catalog/product/cache/a73c0d5d6c75fbb1966fe13af695aeb7/c/0/c08353897_1_xcdcd_2_1.png",
+      "description": "A sleek laptop perfect for work and entertainment with a fast Intel processor and a vibrant display.",
+      "quantity": 1
+    },
+    {
+      "id": "3",
+      "name": "Smartwatch",
+      "price": 199.99,
+      "category": "Electronics",
+      "image": "https://m.media-amazon.com/images/I/716+0qoy3HL._AC_SY300_SX300_.jpg",
+      "description": "A sleek and versatile smartwatch with fitness tracking, heart rate monitoring, and smartphone notifications.",
+      "quantity": 90
+    },
+    {
+      "id": "4",
+      "name": "Yoga Mat",
+      "price": 25,
+      "category": "Sports Equipment",
+      "image": "https://i.ebayimg.com/images/g/MhAAAOSwkttkXJQJ/s-l1600.webp",
+      "description": "A high-density, non-slip yoga mat that provides excellent cushioning for your joints during exercises.",
+      "quantity": 18
+    },
+    {
+      "id": "5",
+      "name": "Bluetooth Speaker",
+      "price": 49.99,
+      "category": "Electronics",
+      "image": "https://i.rtings.com/assets/pages/bKL4AtS9/best-portable-bluetooth-speakers-20231026-medium.jpg?format=auto",
+      "description": "Portable Bluetooth speaker with rich sound and long battery life.",
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "name": "Noise-Cancelling Headphones",
+      "price": 1738.99,
+      "category": "Electronics",
+      "image": "https://ikfaudio.com/cdn/shop/files/Solo-Pro-BR.jpg?v=1725094814&width=1200",
+      "description": "Headphones with advanced noise-canceling technology and superior sound quality.",
+      "quantity": 1
+    },
+    {
+      "id": "7",
+      "name": "Fitness Tracker",
+      "price": 79.99,
+      "category": "Electronics",
+      "image": "https://m.media-amazon.com/images/I/71MBwiI4mxL._AC_SL1500_.jpg",
+      "description": "Track your steps, heart rate, and workouts with this stylish fitness tracker.",
+      "quantity": 1
+    }
+  ]
 }

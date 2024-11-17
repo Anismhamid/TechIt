@@ -8,9 +8,8 @@ import {Form} from "react-bootstrap";
 import {addNewProducts} from "../services/ProductsServices";
 import {useDispatch} from "react-redux";
 import {Dispatch} from "@reduxjs/toolkit";
-import { ProductsAction } from "../redux/ProductsReducer";
+import { ProductsAction, addItemToProductsRedux } from "../redux/ProductsReducer";
 import { Product } from "../interfaces/Product";
-import { addToCart } from "../redux/CartReducer";
 
 interface AddModalProps {}
 
@@ -39,7 +38,7 @@ const AddModal: FunctionComponent<AddModalProps> = () => {
 		}),
 		onSubmit: (values) => {
 			addNewProducts(values as Product).then((res) => {
-				dispatch(addToCart(res.data) as any);
+				dispatch(addItemToProductsRedux(res.data));
 				handleClose();
 			});
 		},

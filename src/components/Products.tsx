@@ -1,4 +1,4 @@
-import {FunctionComponent, useEffect, useState} from "react";
+import {FunctionComponent, useEffect} from "react";
 import Navbar from "./Navbar";
 import {Product} from "../interfaces/Product";
 import {
@@ -9,32 +9,28 @@ import {Link} from "react-router-dom";
 import {cart, deleteItem, edit, shekel} from "../fontAwesome/FontAwesome";
 import {postProductToCart} from "../services/CartServices";
 import {useDispatch, useSelector} from "react-redux";
-import {Dispatch} from "@reduxjs/toolkit";
+import {Dispatch} from "redux";
 import {errorMsg, successMsg} from "../services/Toastify";
 import MiniNav from "./MiniNav";
 import AddModal from "./AddModal";
 import {
 	ProductsAction,
-	ProductsState,
-	addItemToProductsRedux,
 	deleteItemFromProductsReducer,
+	setAllProducts,
 } from "../redux/ProductsReducer";
 
 interface ProductsProps {}
 
 const Products: FunctionComponent<ProductsProps> = () => {
-	const dispatch = useDispatch<Dispatch<ProductsAction>>();
-	const products = useSelector((state: ProductsState) => state.products);
 	const isAdmin = localStorage.getItem("admin") === "true";
+	let products = useSelector((state: any) => state.products.productss);
+	const dispatch = useDispatch<Dispatch<ProductsAction>>();
 
 	useEffect(() => {
 		getTheProducts()
-			.then((res) => {
-				dispatch(addItemToProductsRedux(res.data));
-				console.log(Products);
-			})
+			.then((res) => dispatch(setAllProducts(res.data)))
 			.catch((err) => console.log(`${err}`));
-	}, []);
+	}, [dispatch]);
 
 	const handleDelete = async (productId: string) => {
 		try {
@@ -56,7 +52,7 @@ const Products: FunctionComponent<ProductsProps> = () => {
 				<AddModal />
 				<div className='row'>
 					{products.length ? (
-						products.map((product: Product) => (
+						products.map((product: any) => (
 							<div
 								className='col-md-6 col-sm-12 col-lg-3 mt-5'
 								key={product.id}
@@ -93,7 +89,7 @@ const Products: FunctionComponent<ProductsProps> = () => {
 										</h5>
 										<h5 className='card-text'>
 											<p className='text-success'>
-												{shekel} {product.price.toLocaleString()}
+												{shekel} {product.price}
 											</p>
 										</h5>
 										<h5 className='card-text'>
